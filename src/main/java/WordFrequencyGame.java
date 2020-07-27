@@ -3,6 +3,7 @@ import java.util.*;
 public class WordFrequencyGame {
 
     public static final String SPACE_PATTERN = "\\s+";
+    public static final String SPACE_STRING = " ";
 
     public String getResult(String inputStr) {
         if (inputStr.split(SPACE_PATTERN).length == 1) {
@@ -25,7 +26,7 @@ public class WordFrequencyGame {
                 inputList.sort((w1, w2) -> w2.getWordCount() - w1.getWordCount());
                 StringJoiner joiner = new StringJoiner("\n");
                 for (Input w : inputList) {
-                    String s = w.getValue() + " " + w.getWordCount();
+                    String s = w.getValue() + SPACE_STRING + w.getWordCount();
                     joiner.add(s);
                 }
                 return joiner.toString();
