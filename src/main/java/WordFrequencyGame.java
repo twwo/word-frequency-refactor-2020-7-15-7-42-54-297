@@ -1,12 +1,15 @@
 import java.util.*;
 
 public class WordFrequencyGame {
+
+    public static final String SPACE_PATTERN = "\\s+";
+
     public String getResult(String inputStr) {
-        if (inputStr.split("\\s+").length == 1) {
+        if (inputStr.split(SPACE_PATTERN).length == 1) {
             return inputStr + " 1";
         } else {
             try {
-                String[] arr = inputStr.split("\\s+");
+                String[] arr = inputStr.split(SPACE_PATTERN);
                 List<Input> inputList = new ArrayList<>();
                 for (String s : arr) {
                     Input input = new Input(s, 1);
