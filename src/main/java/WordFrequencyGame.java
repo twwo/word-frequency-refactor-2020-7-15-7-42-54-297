@@ -7,12 +7,12 @@ public class WordFrequencyGame {
     public static final String WRAP_STRING = "\n";
     public static final String CALCULATE_ERROR = "Calculate Error";
 
-    public String getResult(String inputStr) {
-        if (inputStr.split(SPACE_PATTERN).length == 1) {
-            return inputStr + " 1";
+    public String getResult(String sentence) {
+        if (sentence.split(SPACE_PATTERN).length == 1) {
+            return sentence + " 1";
         } else {
             try {
-                String[] arr = inputStr.split(SPACE_PATTERN);
+                String[] arr = sentence.split(SPACE_PATTERN);
                 List<Input> inputList = new ArrayList<>();
                 for (String s : arr) {
                     Input input = new Input(s, 1);
